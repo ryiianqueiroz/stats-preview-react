@@ -1,38 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  position: relative;
   min-height: 100vh;
+  background-color: #0c021b;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  border-radius: 15px;
+  background-color: #201647;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+.content .text {
+  width: 50%;
+}
+.content .text h1 {
+  color: white;
+  margin: 60px;
+  margin-bottom: 0px;
+  width: 70%;
+  font-size: 32px;
+  font-family: "Inter", sans-serif;
+}
+.content .text h1 .insights {
+  color: #7803ff;
+}
+.content .text #p-main {
+  color: #d8d8d8;
+  margin-left: 60px;
+  margin-top: 30px;
+  font-family: "Lexend Deca", sans-serif;
+  width: 80%;
+  line-height: 25px;
+}
+.content .text .cards {
+  display: flex;
+  margin: 60px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.content .text .cards .card {
+  margin-right: 50px;
+}
+.content .text .cards .card h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+.content .text .cards .card p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 11px;
+  color: #b6b6b6;
+  text-transform: uppercase;
+}
+.content .image {
+  width: 50%;
+  background-color: #570080;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.content .image img {
+  opacity: 30%;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 100%;
+  width: 100%;
+}
+.content .image #header-mobile {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 760px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+  .content .text {
+    width: 50%;
+  }
+  .content .text h1 {
+    color: white;
+    margin: 60px;
+    margin-bottom: 0px;
+    width: 70%;
+    font-size: 26px;
+    font-family: "Inter", sans-serif;
+  }
+  .content .text #p-main {
+    color: #d8d8d8;
+    margin-left: 60px;
+    margin-top: 30px;
+    font-family: "Lexend Deca", sans-serif;
+    width: 70%;
+    line-height: 20px;
+    font-size: 14px;
+  }
+  .content .text .cards {
+    display: flex;
+    margin: 60px;
+    color: white;
+  }
+  .content .text .cards .card {
+    margin-right: 38px;
+  }
+  .content .text .cards .card h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+  .content .text .cards .card p {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 10px;
+    color: #b6b6b6;
+    text-transform: uppercase;
+  }
+  .content .image {
+    width: 50%;
+  }
+  .content .image img {
+    opacity: 30%;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 100%;
+    width: 100%;
   }
 }
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 300px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .content .text {
+    width: 100%;
+  }
+  .content .text h1 {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    width: 70%;
+    font-size: 22px;
+  }
+  .content .text #p-main {
+    color: #d8d8d8;
+    margin: auto;
+    margin-top: 20px;
+    width: 80%;
+    line-height: 20px;
+    font-size: 11px;
+  }
+  .content .text .cards {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    color: white;
+  }
+  .content .text .cards .card {
+    margin-right: 0px;
+    margin-top: 20px;
+  }
+  .content .text .cards .card h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+  .content .text .cards .card p {
+    font-size: 10px;
+  }
+  .content .text .cards .card:nth-child(3) {
+    margin-bottom: 30px;
+  }
+  .content .image {
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 0px;
+  }
+  .content .image img {
+    opacity: 30%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 15px;
+    height: 100%;
+    width: 100%;
+  }
+  .content .image #header-image {
+    display: none;
+  }
+  .content .image #header-mobile {
+    display: flex;
+  }
+}
+@media screen and (max-width: 320px) {
+  .container {
+    max-width: 220px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .content .text {
+    width: 100%;
+  }
+  .content .text h1 {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    width: 80%;
+    line-height: 25px;
+    font-size: 18px;
+  }
+  .content .text #p-main {
+    color: #d8d8d8;
+    margin: auto;
+    margin-top: 20px;
+    width: 90%;
+    line-height: 17px;
+    font-size: 10px;
+  }
+  .content .text .cards {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    color: white;
+  }
+  .content .text .cards .card {
+    margin-right: 0px;
+    margin-top: 20px;
+  }
+  .content .text .cards .card h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+  .content .text .cards .card p {
+    font-size: 10px;
+  }
+  .content .text .cards .card:nth-child(3) {
+    margin-bottom: 30px;
+  }
+  .content .image {
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 0px;
+  }
+  .content .image img {
+    opacity: 30%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 15px;
+    height: 100%;
+    width: 100%;
+  }
+  .content .image #header-image {
+    display: none;
+  }
+  .content .image #header-mobile {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */
